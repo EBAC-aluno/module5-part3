@@ -115,7 +115,7 @@ class CalculatorTest {
   }
 
   @Test
-  void should_Throw_Exception_From_devide_Method() {
+  void should_Throw_Exception_From_Divide_Method() {
     RuntimeException exception = Assertions.assertThrows(RuntimeException.class, () -> Calculator.divide(3, 0));
     Assertions.assertEquals("error: division by zero.", exception.getMessage());
   }
