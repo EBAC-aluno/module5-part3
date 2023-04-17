@@ -93,7 +93,7 @@ class CalculatorTest {
   }
 
   @Test
-  void should_Return_Values_From_devide_Method() {
+  void should_Return_Values_From_Divide_Method() {
 
     List<Pair<Float, Float>> inputValues = Arrays.asList(
         new Pair<Float, Float>(0.0f, 1.0f),
