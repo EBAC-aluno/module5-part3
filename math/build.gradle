@@ -1,0 +1,32 @@
+plugins {
+	id 'java'
+	id 'io.spring.dependency-management' version '1.1.0'
+  id 'application'
+}
+
+mainClassName = 'dev.pedrolobo.math.MathApplication'
+
+group = 'dev.pedrolobo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+  testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.9.1'
+  testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.9.1'
+}
+
+run {
+  args += 'first_arg'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+  testLogging.showStandardStreams = true
+  testLogging {
+    events "passed", "skipped", "failed"
+  }
+}
